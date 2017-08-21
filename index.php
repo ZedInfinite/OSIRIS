@@ -1,3 +1,4 @@
+<html>
 <?php
 /*
 Plugin Name: OSIRIS Plugin
@@ -12,18 +13,21 @@ Version: 0.1
 add_action("admin_menu", "addMenu");
 function addMenu()
 {
-	add_menu_page("OSIRIS Options", "OSIRIS Options", 4, "OSIRIS-Options", "OSIRISMenu");
-	add_submenu_page("OSIRIS-Options", "Option 1", "Option 2", 4, "OSIRIS-Options-1", "SubmenuExample");
+	add_menu_page("OSIRIS Dashboard", "OSIRIS", 4, "OSIRIS-Dashboard", "OSIRISDashboard");
+	add_submenu_page("OSIRIS-Dashboard", "Submenu1", "Submenu1", 4, "OSIRIS-Submenu-1", "Submenu1");
 }
 
-function OSIRISMenu()
+// Content for the main page of OSIRIS plugin
+function OSIRISDashboard()
 {
-	echo "This is just a test: Zed";
+	?> <h1>This is just a test: Zed</h1> <?php
 }
 
-function SubmenuExample()
+// Content for submenu item 1 of OSIRIS plugin
+function Submenu1()
 {
-	echo "This is just a test for the submenu: Zed";
+    ?> <h1>This is just a test for the submenu: Zed</h1> <?php
 }
 
 ?>
+</html>
