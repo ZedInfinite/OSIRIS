@@ -9,7 +9,7 @@ Author URI:
 Version: 0.1
 */
 
-//Adding side panel entry for OSIRIS
+//Adding side panel entry for OSIRIS jack
 add_action("admin_menu", "addMenu");
 function addMenu()
 {
